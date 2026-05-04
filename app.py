@@ -11,90 +11,89 @@ Elige la respuesta que describa tu reacción **más natural e instintiva**, no l
 """)
 st.divider()
 
-# Diccionario con las 10 preguntas y sus opciones mapeadas a los perfiles (A, B, C)
+# Diccionario con las 10 preguntas genéricas y sus opciones mapeadas a los perfiles (A, B, C)
 preguntas = [
     {
-        "pregunta": "1. Estás a la mitad de una ruta exigente y una llanta se raja de forma imprevista, retrasando tu cronograma. ¿Cuál es tu reacción inicial?",
+        "pregunta": "1. Estás en camino a un compromiso importante y tu transporte falla (se pincha una llanta, el bus se vara, hay un trancón masivo). ¿Cuál es tu reacción inicial?",
         "opciones": {
-            "Me frustro muchísimo por la mala suerte y siento que el día de entrenamiento se arruinó.": "A",
-            "Me preocupo por si lograré llegar a tiempo o si el clima empeorará mientras reparo.": "B",
-            "Acepto el hecho en un segundo. Saco mis herramientas, aplico la solución más rápida a la mano y sigo.": "C"
+            "Me frustro muchísimo por la mala suerte y siento que el día se arruinó por completo.": "A",
+            "Me lleno de ansiedad pensando en lo que van a decir los demás por mi retraso.": "B",
+            "Acepto el hecho en un segundo. Aviso que llegaré tarde, busco la solución más rápida a la mano y ajusto mi plan.": "C"
         }
     },
     {
-        "pregunta": "2. Estás desarrollando una arquitectura de software compleja y te enfrentas a un cuello de botella. ¿Cómo lo resuelves?",
+        "pregunta": "2. Estás trabajando en un proyecto (laboral o personal) y te enfrentas a un problema que parece no tener solución clara. ¿Cómo lo abordas?",
         "opciones": {
-            "Me obsesiono intentando diseñar la solución teórica más perfecta y elegante posible, aunque tome semanas.": "A",
-            "Me estreso por la presión y pruebo diferentes cosas al azar esperando que alguna funcione.": "B",
-            "Evalúo el problema con pragmatismo y aplico la solución más simple y efectiva para que el engranaje gire.": "C"
+            "Me frustro y me obsesiono intentando que todo salga perfecto, aunque me tome muchísimo tiempo extra.": "A",
+            "Me estreso por la presión, me bloqueo y empiezo a dudar si soy capaz de terminarlo.": "B",
+            "Evalúo el problema con pragmatismo y aplico la solución más simple y efectiva que permita avanzar, aunque no sea perfecta.": "C"
         }
     },
     {
-        "pregunta": "3. Un servidor externo o base de datos falla justo antes de la entrega de un proyecto. ¿Cómo lo interpretas?",
+        "pregunta": "3. Faltando poco tiempo para entregar algo clave, se va la luz, se cae el internet o falla una herramienta externa. ¿Cómo lo interpretas?",
         "opciones": {
-            "Como una injusticia del sistema o del proveedor que siempre me complica la vida.": "A",
-            "Como una crisis que me genera pánico y me hace dudar de mis capacidades.": "B",
-            "Como la prueba de estrés perfecta para demostrar mi capacidad de resolución y hacer el sistema tolerante a fallos.": "C"
+            "Como una injusticia de la vida o de la empresa proveedora que siempre me complica la existencia.": "A",
+            "Como una crisis total que me genera pánico y me paraliza.": "B",
+            "Como una prueba de estrés. Respiro, busco una contingencia inmediata (compartir datos, usar papel) y resuelvo con lo que tengo.": "C"
         }
     },
     {
-        "pregunta": "4. Recibes una retroalimentación bastante dura sobre la gestión de uno de tus proyectos. ¿Qué hace tu mente?",
+        "pregunta": "4. Recibes una crítica dura sobre tu desempeño o sobre algo que hiciste con mucho esfuerzo. ¿Qué hace tu mente?",
         "opciones": {
-            "Se pone a la defensiva inmediatamente para proteger mi reputación y justificar mis decisiones.": "A",
-            "Se toma el comentario de forma personal, afectando mi estado de ánimo el resto del día.": "B",
-            "Separa el tono emocional de la otra persona, extrae únicamente los datos objetivos útiles y desecha el ruido.": "C"
+            "Se pone a la defensiva inmediatamente para proteger mi orgullo y justificar por qué lo hice así.": "A",
+            "Se toma el comentario de forma muy personal, arruinando mi estado de ánimo por varios días.": "B",
+            "Separa el tono emocional de quien lo dice, extrae únicamente los datos que sirven para mejorar y desecha el resto.": "C"
         }
     },
     {
-        "pregunta": "5. Tienes un día con cero motivación, estás cansado y debes cumplir con un bloque de entrenamiento o estudio. ¿Qué haces?",
+        "pregunta": "5. Te despiertas con cero motivación, estás cansado y tienes una lista de responsabilidades importantes por cumplir. ¿Qué haces?",
         "opciones": {
-            "Pospongo la sesión. Si no tengo la energía correcta, no vale la pena hacerlo a medias.": "A",
-            "Me obligo a hacerlo mientras me quejo mentalmente todo el tiempo sobre lo miserable que es.": "B",
-            "Me apoyo en la disciplina. Ejecuto el trabajo porque es lo que dicta mi sistema, aceptando que hoy no será mi mejor rendimiento.": "C"
+            "Pospongo todo lo que puedo. Si no tengo la energía o el ánimo correcto, no vale la pena hacer las cosas.": "A",
+            "Me obligo a hacerlo, pero me quejo mentalmente y con los demás todo el día sobre lo cansado que estoy.": "B",
+            "Me apoyo en la disciplina. Hago lo que tengo que hacer porque es mi deber, aceptando que hoy no daré el 100%, pero cumplo.": "C"
         }
     },
     {
-        "pregunta": "6. Estás planificando un viaje de varios días o el lanzamiento de una herramienta técnica. ¿En qué te enfocas?",
+        "pregunta": "6. Estás planificando un viaje importante o un evento clave para tu vida. ¿En qué se centra tu mente?",
         "opciones": {
-            "En visualizar el éxito total y pensar en lo increíble que será cuando todo salga bien.": "A",
-            "En sentir ansiedad por todo lo que desconozco y dudar si estoy realmente preparado.": "B",
-            "En mapear sistemáticamente los puntos de fallo (clima, hardware, bugs) para tener planes de contingencia listos.": "C"
+            "En imaginar solo escenarios perfectos y molestarme si alguien sugiere que algo podría salir mal.": "A",
+            "En sentir ansiedad por todo lo que desconozco y preocuparme por cosas que aún no pasan.": "B",
+            "En mapear sistemáticamente qué podría salir mal (clima, retrasos, dinero) para tener planes de contingencia o plan B listos.": "C"
         }
     },
     {
-        "pregunta": "7. Alguien comete una imprudencia en el tráfico o es grosero contigo. ¿Cuánto dura tu reacción?",
+        "pregunta": "7. Alguien es grosero contigo sin razón aparente en la calle o en una fila. ¿Cuánto dura tu reacción?",
         "opciones": {
-            "Me arruina la mañana. Sigo pensando en lo estúpida que es la gente y lo comento más tarde.": "A",
-            "Me asusto y me quedo con una sensación de nerviosismo prolongada.": "B",
-            "Me molesta unos segundos, recuerdo que mi tiempo es valioso para gastarlo en lo que no controlo, y paso la página.": "C"
+            "Me arruina la mañana. Sigo pensando en lo estúpida que es la gente y le cuento la historia a todos.": "A",
+            "Me asusto, me siento intimidado y me quedo con una sensación de incomodidad prolongada.": "B",
+            "Me molesta unos segundos, recuerdo que mi paz mental es más valiosa que un desconocido que no controlo, y paso la página.": "C"
         }
     },
     {
-        "pregunta": "8. Te encuentras con un obstáculo físico o técnico que parece insuperable. ¿Cuál es tu diálogo interno?",
+        "pregunta": "8. Te encuentras con un obstáculo grande que frena tus planes a mediano plazo (un gasto imprevisto, un cambio de reglas). ¿Cuál es tu diálogo interno?",
         "opciones": {
-            "¿Por qué me pasa esto a mí justo ahora?": "A",
-            "Creo que esto es una señal de que debería abandonar este camino.": "B",
-            "El obstáculo es el camino. Resolver esto es exactamente lo que necesito para subir al siguiente nivel.": "C"
+            "¿Por qué siempre me pasan estas cosas a mí?": "A",
+            "Esto es una señal de que debería abandonar este plan por completo, es muy arriesgado.": "B",
+            "El obstáculo es el camino. Toca recalcular la ruta; resolver esto me dará más experiencia.": "C"
         }
     },
     {
-        "pregunta": "9. Al evaluar el éxito de un día de trabajo, ¿qué métrica utilizas?",
+        "pregunta": "9. Al terminar el día, ¿cómo mides si fue un 'buen día'?",
         "opciones": {
-            "Cuántos aplausos, reconocimiento o validación externa recibí.": "A",
-            "Si tuve suerte y no ocurrió ningún problema grave.": "B",
-            "Si tomé buenas decisiones, mantuve mi disciplina y me enfoqué en lo que estaba bajo mi control.": "C"
+            "Si recibí halagos, reconocimiento en redes o si los demás me dieron la razón.": "A",
+            "Si tuve suerte y no tuve que enfrentar ningún conflicto o problema difícil.": "B",
+            "Si tomé buenas decisiones, mantuve mis valores y me enfoqué en lo que estaba bajo mi control.": "C"
         }
     },
     {
-        "pregunta": "10. Lees un correo ambiguo de un cliente o superior que podría interpretarse como queja. ¿Qué haces?",
+        "pregunta": "10. Lees un mensaje ambiguo de tu jefe, un cliente o tu pareja que podría interpretarse como un reclamo. ¿Qué haces?",
         "opciones": {
-            "Asumo lo peor, imagino que están furiosos y empiezo a armar una defensa mental.": "A",
-            "Lo ignoro por miedo a enfrentar una posible confrontación.": "B",
-            "Leo estrictamente las palabras. No añado historias emocionales. Si necesito claridad, hago una pregunta directa.": "C"
+            "Asumo lo peor, imagino que están furiosos y empiezo a armar una defensa agresiva en mi cabeza.": "A",
+            "Lo ignoro o respondo con evasivas por miedo a enfrentar una posible confrontación.": "B",
+            "Leo estrictamente las palabras escritas sin añadirles tono emocional. Si necesito claridad, hago una pregunta directa.": "C"
         }
     }
 ]
-
 # Inicializamos la lista para guardar los resultados
 respuestas_usuario = []
 
